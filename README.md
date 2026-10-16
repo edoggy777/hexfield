@@ -1,5 +1,7 @@
 # Hexfield
 
+Play Now: https://0x3ebcacd54628fb0abdb01ddeebf6920aabee96ed.8453.w3link.io/
+
 A fully onchain hex-territory strategy game for Base. No server, no indexer, no admin keys.
 The rules, the map, every player's state **and the web page itself** are contracts.
 
