@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Hexfield</title>
+<style>
+  :root { --bg:#0e1116; --panel:#171c24; --ink:#e6e9ef; --muted:#8a93a3; --accent:#f2b134; --line:#2a3240; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.4 ui-monospace,Menlo,Consolas,monospace; }
+  #app { display:grid; grid-template-rows:auto 1fr auto; height:100%; }
+  header { display:flex; gap:16px; align-items:center; padding:8px 12px; background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  header b { color:var(--accent); letter-spacing:.08em; }
+  header span { color:var(--muted); }
+  header span i { color:var(--ink); font-style:normal; }
+  #wrap { position:relative; overflow:hidden; }
+  canvas { display:block; width:100%; height:100%; touch-action:none; cursor:crosshair; }
+  footer { display:flex; gap:8px; align-items:center; padding:8px 12px; background:var(--panel); border-top:1px solid var(--line); flex-wrap:wrap; }
+  button { background:#222a36; color:var(--ink); border:1px solid var(--line); padding:6px 10px; border-radius:4px; font:inherit; cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  button:disabled { opacity:.4; cursor:default; }
+  input[type=number] { width:64px; background:#0e1116; color:var(--ink); border:1px solid var(--line); padding:5px; border-radius:4px; font:inherit; }
+  #msg { color:var(--muted); margin-left:auto; }
+  #sel { color:var(--muted); }
+  .warn { color:#ff7b6b; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <b>HEXFIELD</b>
+    <span>block <i id="blk">–</i></span>
+    <span>season ends <i id="end">–</i></span>
+    <span>grain <i id="grain">–</i></span>
+    <span>ore <i id="ore">–</i></span>
+    <span>tiles <i id="tiles">–</i></span>
+    <span>score <i id="score">–</i></span>
+    <span id="acct"></span>
+  </header>
+  <div id="wrap"><canvas id="c"></canvas></div>
+  <footer>
+    <button id="connect">connect wallet</button>
+    <button id="spawn" disabled>spawn here</button>
+    <input id="n" type="number" min="1" value="5" title="troops">
+    <button id="move" disabled>move →</button>
+    <button id="recruit" disabled>recruit</button>
+    <button id="farm" disabled>farm</button>
+    <button id="mine" disabled>mine</button>
+    <button id="fort" disabled>fort</button>
+    <span id="sel"></span>
+    <span id="msg"></span>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

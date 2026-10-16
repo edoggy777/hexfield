@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+script = "script"
+solc_version = "0.8.30"
+optimizer = true
+optimizer_runs = 10_000
+evm_version = "cancun"
+fs_permissions = [{ access = "read", path = "./out/ui" }]
+remappings = ["forge-std/=lib/forge-std/src/"]
+
+[lint]
+exclude_lints = ["unsafe-typecast"]
+
+[fuzz]
+runs = 256
+
+[rpc_endpoints]
+base = "https://mainnet.base.org"
+base_sepolia = "https://sepolia.base.org"
+
+[fmt]
+line_length = 110

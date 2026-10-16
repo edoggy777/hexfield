@@ -1,0 +1,21 @@
+{
+  "_comment": "Serve this at https://<YOUR_DOMAIN>/.well-known/farcaster.json. Fill accountAssociation by signing the domain in Base App / Warpcast developer tools. The domain is only a pointer: it should proxy to web3://<RENDERER>:<CHAINID>/ via a web3:// gateway or an IPFS mirror of the same build. Everything the page does hits the chain directly.",
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Hexfield",
+    "iconUrl": "https://<YOUR_DOMAIN>/icon.png",
+    "homeUrl": "https://<YOUR_DOMAIN>/",
+    "splashImageUrl": "https://<YOUR_DOMAIN>/splash.png",
+    "splashBackgroundColor": "#0e1116",
+    "subtitle": "Fully onchain hex strategy",
+    "description": "Claim land, build, recruit and fight for territory. Every rule, every tile and the page itself live in contracts on Base.",
+    "primaryCategory": "games",
+    "tags": ["strategy", "onchain", "base", "multiplayer"],
+    "requiredChains": ["eip155:8453"]
+  }
+}
